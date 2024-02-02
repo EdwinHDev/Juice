@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bakbak+One&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+    <link href="/src/styles/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/styles/main.css">
+    <title>Jusux - Entrar</title>
+  </head>
+  <body>
+
+    <!-- Modal busqueda -->
+    <div id="search-modal" tabindex="-1" aria-hidden="true" data-modal-placement="top-center" class="fixed top-16 left-2/4 -translate-x-2/4 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto h-[calc(100%-1rem)] max-h-full">
+      <div class="relative p-4 w-full max-w-4xl max-h-full">
+          <div class="relative bg-white rounded-[32px] shadow border border-zinc-200 py-6 px-16">
+              <div class="flex gap-4 items-center border border-zinc-200 rounded-full overflow-hidden pe-4">
+                <input
+                  type="text"
+                  value="Jugo de fresa" 
+                  class="text-[#292D32] py-4 flex-1 border-none focus:border-none outline-none focus:outline-none"
+                  style="border: none !important; outline: none !important; box-shadow: none !important;"
+                >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="cursor-pointer">
+                  <path d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z" stroke="#CCCCCC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M22 22L20 20" stroke="#CCCCCC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="flex justify-between gap-3 p-4 select-none mt-6">
+                <div class="flex gap-3">
+                  <div class="p-1 w-16 h-16 min-w-16 rounded-3xl bg-zinc-200 overflow-hidden flex justify-center items-center">
+                    <img src="/src/assets/images/juice_red.png" alt="juice red" class="w-full h-full object-contain">
+                  </div>
+                  <div class="flex-1">
+                    <h4 class="text-xl text-[#292D32] font-semibold min-w-max">Jugo de fresa</h4>
+                    <p class="text-zinc-400 line-clamp-2">Disfruta de un delicioso jugo de fresa 100% natural, libre de conservantes y aditivos que pueden perjudicar la salud.</p>
+                  </div>
+                </div>
+                <h3 class="text-2xl text-orange-500 font-extrabold min-w-max">$ 3,00</h3>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Dropdown del carrito -->
+    <div id="dropdownCart" class="z-50 hidden bg-white divide-y border border-zinc-200 rounded-[32px] shadow max-w-max overflow-hidden">
+      <ul class="text-xl" aria-labelledby="dropdownCart">
+        <li class="flex justify-between gap-3 items-center p-4 select-none hover:bg-zinc-100">
+          <div class="flex gap-3">
+            <div class="p-1 w-16 h-16 rounded-3xl bg-zinc-200 overflow-hidden flex justify-center items-center">
+              <img src="/src/assets/images/juice_red.png" alt="juice red" class="w-full h-full object-contain">
+            </div>
+            <div>
+              <h4 class="text-xl text-[#292D32] font-semibold min-w-max">Jugo de fresa</h4>
+              <h3 class="text-2xl text-orange-500 font-extrabold">$ 3,00</h3>
+            </div>
+          </div>
+          <div class="w-10 h-10 flex justify-center items-center rounded-2xl hover:bg-red-100 cursor-pointer group">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" class="stroke-[#292D32] group-hover:stroke-red-500">
+              <path d="M21 5.97998C17.67 5.64998 14.32 5.47998 10.98 5.47998C9 5.47998 7.02 5.57998 5.04 5.77998L3 5.97998" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18.85 9.13989L18.2 19.2099C18.09 20.7799 18 21.9999 15.21 21.9999H8.78999C5.99999 21.9999 5.90999 20.7799 5.79999 19.2099L5.14999 9.13989" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10.33 16.5H13.66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9.5 12.5H14.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </li>
+        <li class="flex gap-3 justify-between items-center p-4 select-none hover:bg-zinc-100">
+          <div class="flex gap-3">
+            <div class="p-1 w-16 h-16 rounded-3xl bg-zinc-200 overflow-hidden flex justify-center items-center">
+              <img src="/src/assets/images/juice_orange.png" alt="juice red" class="w-full h-full object-contain">
+            </div>
+            <div>
+              <h4 class="text-xl text-[#292D32] font-semibold min-w-max">Jugo de naranja</h4>
+              <h3 class="text-2xl text-orange-500 font-extrabold">$ 2,25</h3>
+            </div>
+          </div>
+          <div class="w-10 h-10 flex justify-center items-center rounded-2xl hover:bg-red-100 cursor-pointer group">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" class="stroke-[#292D32] group-hover:stroke-red-500">
+              <path d="M21 5.97998C17.67 5.64998 14.32 5.47998 10.98 5.47998C9 5.47998 7.02 5.57998 5.04 5.77998L3 5.97998" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18.85 9.13989L18.2 19.2099C18.09 20.7799 18 21.9999 15.21 21.9999H8.78999C5.99999 21.9999 5.90999 20.7799 5.79999 19.2099L5.14999 9.13989" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10.33 16.5H13.66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9.5 12.5H14.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>             
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Dropdown del usuario -->
+    <div id="dropdown" class="z-50 hidden bg-white divide-y border border-zinc-200 rounded-[32px] shadow max-w-max overflow-hidden">
+      <ul class="text-xl" aria-labelledby="dropdownUser">
+        <li><a href="index.html" class="text-orange-500 px-6 py-4 hover:bg-zinc-100 flex gap-3 items-center lg:hidden">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="fill-orange-400">
+            <path d="M11.25 18C11.25 18.4142 11.5858 18.75 12 18.75C12.4142 18.75 12.75 18.4142 12.75 18V15C12.75 14.5858 12.4142 14.25 12 14.25C11.5858 14.25 11.25 14.5858 11.25 15V18Z" />
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1.25C11.2919 1.25 10.6485 1.45282 9.95055 1.79224C9.27585 2.12035 8.49642 2.60409 7.52286 3.20832L5.45628 4.4909C4.53509 5.06261 3.79744 5.5204 3.2289 5.95581C2.64015 6.40669 2.18795 6.86589 1.86131 7.46263C1.53535 8.05812 1.38857 8.69174 1.31819 9.4407C1.24999 10.1665 1.24999 11.0541 1.25 12.1672V13.7799C1.24999 15.6837 1.24998 17.1866 1.4027 18.3616C1.55937 19.567 1.88856 20.5401 2.63236 21.3094C3.37958 22.0824 4.33046 22.4277 5.50761 22.5914C6.64849 22.75 8.10556 22.75 9.94185 22.75H14.0581C15.8944 22.75 17.3515 22.75 18.4924 22.5914C19.6695 22.4277 20.6204 22.0824 21.3676 21.3094C22.1114 20.5401 22.4406 19.567 22.5973 18.3616C22.75 17.1866 22.75 15.6838 22.75 13.7799V12.1672C22.75 11.0541 22.75 10.1665 22.6818 9.4407C22.6114 8.69174 22.4646 8.05812 22.1387 7.46263C21.8121 6.86589 21.3599 6.40669 20.7711 5.95581C20.2026 5.5204 19.4649 5.06262 18.5437 4.49091L16.4771 3.20831C15.5036 2.60409 14.7241 2.12034 14.0494 1.79224C13.3515 1.45282 12.7081 1.25 12 1.25ZM8.27953 4.50412C9.29529 3.87371 10.0095 3.43153 10.6065 3.1412C11.1882 2.85833 11.6002 2.75 12 2.75C12.3998 2.75 12.8118 2.85833 13.3935 3.14119C13.9905 3.43153 14.7047 3.87371 15.7205 4.50412L17.7205 5.74537C18.6813 6.34169 19.3559 6.76135 19.8591 7.1467C20.3487 7.52164 20.6303 7.83106 20.8229 8.18285C21.0162 8.53589 21.129 8.94865 21.1884 9.58104C21.2492 10.2286 21.25 11.0458 21.25 12.2039V13.725C21.25 15.6959 21.2485 17.1012 21.1098 18.1683C20.9736 19.2163 20.717 19.8244 20.2892 20.2669C19.8649 20.7058 19.2871 20.9664 18.2858 21.1057C17.2602 21.2483 15.9075 21.25 14 21.25H10C8.09247 21.25 6.73983 21.2483 5.71422 21.1057C4.71286 20.9664 4.13514 20.7058 3.71079 20.2669C3.28301 19.8244 3.02642 19.2163 2.89019 18.1683C2.75149 17.1012 2.75 15.6959 2.75 13.725V12.2039C2.75 11.0458 2.75076 10.2286 2.81161 9.58104C2.87103 8.94865 2.98385 8.53589 3.17709 8.18285C3.36965 7.83106 3.65133 7.52164 4.14092 7.1467C4.6441 6.76135 5.31869 6.34169 6.27953 5.74537L8.27953 4.50412Z" />
+          </svg>            
+          Menú
+        </a></li>
+        <li><a href="nosotros.html" class="text-[#292D32] px-6 py-4 hover:bg-zinc-100 flex gap-3 items-center lg:hidden">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 6.25C7.48122 6.25 6.25 7.48122 6.25 9C6.25 10.5188 7.48122 11.75 9 11.75C10.5188 11.75 11.75 10.5188 11.75 9C11.75 7.48122 10.5188 6.25 9 6.25ZM7.75 9C7.75 8.30965 8.30965 7.75 9 7.75C9.69036 7.75 10.25 8.30965 10.25 9C10.25 9.69036 9.69036 10.25 9 10.25C8.30965 10.25 7.75 9.69036 7.75 9Z" fill="#292D32"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 12.25C7.80424 12.25 6.68461 12.4907 5.83616 12.915C5.03258 13.3168 4.25 14.0106 4.25 15L4.24987 15.0625C4.24834 15.5728 4.24576 16.4322 5.06023 17.0218C5.43818 17.2953 5.9369 17.4698 6.55469 17.581C7.1782 17.6932 7.97721 17.75 9 17.75C10.0228 17.75 10.8218 17.6932 11.4453 17.581C12.0631 17.4698 12.5618 17.2953 12.9398 17.0218C13.7542 16.4322 13.7517 15.5728 13.7501 15.0625L13.75 15C13.75 14.0106 12.9674 13.3168 12.1638 12.915C11.3154 12.4907 10.1958 12.25 9 12.25ZM5.75 15C5.75 14.8848 5.86285 14.5787 6.50698 14.2566C7.10625 13.957 7.98662 13.75 9 13.75C10.0134 13.75 10.8937 13.957 11.493 14.2566C12.1371 14.5787 12.25 14.8848 12.25 15C12.25 15.6045 12.2115 15.6972 12.0602 15.8067C11.9382 15.895 11.6869 16.0134 11.1797 16.1047C10.6782 16.1949 9.97721 16.25 9 16.25C8.02279 16.25 7.3218 16.1949 6.82031 16.1047C6.31311 16.0134 6.06182 15.895 5.93977 15.8067C5.78849 15.6972 5.75 15.6045 5.75 15Z" fill="#292D32"/>
+            <path d="M19 12.75C19.4142 12.75 19.75 12.4142 19.75 12C19.75 11.5858 19.4142 11.25 19 11.25H15C14.5858 11.25 14.25 11.5858 14.25 12C14.25 12.4142 14.5858 12.75 15 12.75H19Z" fill="#292D32"/>
+            <path d="M19.75 9C19.75 9.41422 19.4142 9.75 19 9.75H14C13.5858 9.75 13.25 9.41422 13.25 9C13.25 8.58579 13.5858 8.25 14 8.25H19C19.4142 8.25 19.75 8.58579 19.75 9Z" fill="#292D32"/>
+            <path d="M19 15.75C19.4142 15.75 19.75 15.4142 19.75 15C19.75 14.5858 19.4142 14.25 19 14.25H16C15.5858 14.25 15.25 14.5858 15.25 15C15.25 15.4142 15.5858 15.75 16 15.75H19Z" fill="#292D32"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.94358 3.25H14.0564C15.8942 3.24998 17.3498 3.24997 18.489 3.40314C19.6614 3.56076 20.6104 3.89288 21.3588 4.64124C22.1071 5.38961 22.4392 6.33856 22.5969 7.51098C22.75 8.65018 22.75 10.1058 22.75 11.9435V12.0564C22.75 13.8942 22.75 15.3498 22.5969 16.489C22.4392 17.6614 22.1071 18.6104 21.3588 19.3588C20.6104 20.1071 19.6614 20.4392 18.489 20.5969C17.3498 20.75 15.8942 20.75 14.0565 20.75H9.94359C8.10585 20.75 6.65018 20.75 5.51098 20.5969C4.33856 20.4392 3.38961 20.1071 2.64124 19.3588C1.89288 18.6104 1.56076 17.6614 1.40314 16.489C1.24997 15.3498 1.24998 13.8942 1.25 12.0564V11.9436C1.24998 10.1058 1.24997 8.65019 1.40314 7.51098C1.56076 6.33856 1.89288 5.38961 2.64124 4.64124C3.38961 3.89288 4.33856 3.56076 5.51098 3.40314C6.65019 3.24997 8.10583 3.24998 9.94358 3.25ZM5.71085 4.88976C4.70476 5.02503 4.12511 5.27869 3.7019 5.7019C3.27869 6.12511 3.02503 6.70476 2.88976 7.71085C2.75159 8.73851 2.75 10.0932 2.75 12C2.75 13.9068 2.75159 15.2615 2.88976 16.2892C3.02503 17.2952 3.27869 17.8749 3.7019 18.2981C4.12511 18.7213 4.70476 18.975 5.71085 19.1102C6.73851 19.2484 8.09318 19.25 10 19.25H14C15.9068 19.25 17.2615 19.2484 18.2892 19.1102C19.2952 18.975 19.8749 18.7213 20.2981 18.2981C20.7213 17.8749 20.975 17.2952 21.1102 16.2892C21.2484 15.2615 21.25 13.9068 21.25 12C21.25 10.0932 21.2484 8.73851 21.1102 7.71085C20.975 6.70476 20.7213 6.12511 20.2981 5.7019C19.8749 5.27869 19.2952 5.02503 18.2892 4.88976C17.2615 4.75159 15.9068 4.75 14 4.75H10C8.09318 4.75 6.73851 4.75159 5.71085 4.88976Z" fill="#292D32"/>
+          </svg> 
+          Nosotros
+        </a></li>
+        <li><a href="blog.html" class="text-[#292D32] px-6 py-4 hover:bg-zinc-100 flex gap-3 items-center lg:hidden">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25 7.52174C7.25 6.26709 8.26709 5.25 9.52174 5.25H12C14.0711 5.25 15.75 6.92893 15.75 9C15.75 10.029 15.3356 10.9612 14.6645 11.6387C15.9004 12.2519 16.75 13.5268 16.75 15C16.75 17.0711 15.0711 18.75 13 18.75H9.17647C8.11251 18.75 7.25 17.8875 7.25 16.8235V7.52174ZM8.75 11.25H12C13.2426 11.25 14.25 10.2426 14.25 9C14.25 7.75736 13.2426 6.75 12 6.75H9.52174C9.09552 6.75 8.75 7.09552 8.75 7.52174V11.25ZM8.75 12.75V16.8235C8.75 17.0591 8.94094 17.25 9.17647 17.25H13C14.2426 17.25 15.25 16.2426 15.25 15C15.25 13.7574 14.2426 12.75 13 12.75H8.75Z" fill="#292D32"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9426 1.25H12.0574C14.3658 1.24999 16.1748 1.24998 17.5863 1.43975C19.031 1.63399 20.1711 2.03933 21.0659 2.93414C21.9607 3.82895 22.366 4.96897 22.5603 6.41371C22.75 7.82519 22.75 9.63423 22.75 11.9426V12.0574C22.75 14.3658 22.75 16.1748 22.5603 17.5863C22.366 19.031 21.9607 20.1711 21.0659 21.0659C20.1711 21.9607 19.031 22.366 17.5863 22.5603C16.1748 22.75 14.3658 22.75 12.0574 22.75H11.9426C9.63423 22.75 7.82519 22.75 6.41371 22.5603C4.96897 22.366 3.82895 21.9607 2.93414 21.0659C2.03933 20.1711 1.63399 19.031 1.43975 17.5863C1.24998 16.1748 1.24999 14.3658 1.25 12.0574V11.9426C1.24999 9.63423 1.24998 7.82519 1.43975 6.41371C1.63399 4.96897 2.03933 3.82895 2.93414 2.93414C3.82895 2.03933 4.96897 1.63399 6.41371 1.43975C7.82519 1.24998 9.63423 1.24999 11.9426 1.25ZM6.61358 2.92637C5.33517 3.09825 4.56445 3.42514 3.9948 3.9948C3.42514 4.56445 3.09825 5.33517 2.92637 6.61358C2.75159 7.91356 2.75 9.62178 2.75 12C2.75 14.3782 2.75159 16.0864 2.92637 17.3864C3.09825 18.6648 3.42514 19.4355 3.9948 20.0052C4.56445 20.5749 5.33517 20.9018 6.61358 21.0736C7.91356 21.2484 9.62178 21.25 12 21.25C14.3782 21.25 16.0864 21.2484 17.3864 21.0736C18.6648 20.9018 19.4355 20.5749 20.0052 20.0052C20.5749 19.4355 20.9018 18.6648 21.0736 17.3864C21.2484 16.0864 21.25 14.3782 21.25 12C21.25 9.62178 21.2484 7.91356 21.0736 6.61358C20.9018 5.33517 20.5749 4.56445 20.0052 3.9948C19.4355 3.42514 18.6648 3.09825 17.3864 2.92637C16.0864 2.75159 14.3782 2.75 12 2.75C9.62178 2.75 7.91356 2.75159 6.61358 2.92637Z" fill="#292D32"/>
+          </svg>
+          Blog
+        </a></li>
+        <hr class="lg:hidden">
+        <li><a href="entrar.html" class="text-[#292D32] px-6 py-4 hover:bg-zinc-100 flex gap-3 items-center">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.68 14.62L14.24 12.06L11.68 9.5" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4 12.0601H14.17" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 4C16.42 4 20 7 20 12C20 17 16.42 20 12 20" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Entrar
+        </a></li>
+        <li><a href="registrar.html" class="text-[#292D32] px-6 py-4 hover:bg-zinc-100 flex gap-3 items-center">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.5 19.5H14.5" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16.5 21.5V17.5" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12.16 10.87C12.06 10.86 11.94 10.86 11.83 10.87C9.45 10.79 7.56 8.84 7.56 6.44C7.55 3.99 9.54 2 11.99 2C14.44 2 16.43 3.99 16.43 6.44C16.43 8.84 14.53 10.79 12.16 10.87Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M11.99 21.8101C10.17 21.8101 8.36001 21.3501 6.98001 20.4301C4.56001 18.8101 4.56001 16.1701 6.98001 14.5601C9.73001 12.7201 14.24 12.7201 16.99 14.5601" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Registrar
+        </a></li>
+      </ul>
+    </div>
+    
+    <!-- Navegación -->
+    <header>
+      <nav class="bg-white py-8">
+        <div class="container mx-auto">
+          <section class="flex justify-between items-center px-4 lg:px-0">
+            <a href="index.html" class="active:scale-95 transition-all">
+              <h1 class="bakbak-one text-[40px] text-[#292D32]">Jusux</h1>
+            <a href="index.html">
+
+            <ul class="hidden lg:flex gap-6">
+              <li><a href="index.html" class="text-xl text-[#292D32] px-6 py-3 rounded-full border border-zinc-300 font-medium block transition-all active:scale-95"> 
+                Menú
+              </a></li>
+              <li><a href="nosotros.html" class="text-xl text-[#292D32] px-6 py-3 rounded-full border border-transparent hover:border-zinc-300 active:border-zinc-300 font-medium block transition-all active:scale-95">
+                Nosotros
+              </a></li>
+              <li><a href="blog.html" class="text-xl text-[#292D32] px-6 py-3 rounded-full border border-transparent hover:border-zinc-300 active:border-zinc-300 font-medium block transition-all active:scale-95">
+                Blog
+              </a></li>
+            </ul>
+
+            <div class="flex items-center gap-6">
+              <button class="w-14 h-14 rounded-full border border-zinc-300 flex justify-center items-center hover:bg-orange-50 transition-all active:scale-95">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M22 22L20 20" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                  
+              </button>
+              <button class="relative w-14 h-14 rounded-full border border-zinc-300 flex justify-center items-center hover:bg-orange-50 transition-all active:scale-95">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 2H3.74001C4.82001 2 5.67 2.93 5.58 4L4.75 13.96C4.61 15.59 5.89999 16.99 7.53999 16.99H18.19C19.63 16.99 20.89 15.81 21 14.38L21.54 6.88C21.66 5.22 20.4 3.87 18.73 3.87H5.82001" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M16.25 22C16.9404 22 17.5 21.4404 17.5 20.75C17.5 20.0596 16.9404 19.5 16.25 19.5C15.5596 19.5 15 20.0596 15 20.75C15 21.4404 15.5596 22 16.25 22Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M8.25 22C8.94036 22 9.5 21.4404 9.5 20.75C9.5 20.0596 8.94036 19.5 8.25 19.5C7.55964 19.5 7 20.0596 7 20.75C7 21.4404 7.55964 22 8.25 22Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M9 8H21" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="w-5 h-5 rounded-full bg-red-500 text-xs font-medium text-white flex justify-center items-center absolute -top-1 -right-1">
+                  2
+                </div>                                 
+              </button>
+              <button
+                id="dropdownUser"
+                data-dropdown-toggle="dropdown"
+                class="w-14 h-14 rounded-full border border-zinc-300 flex justify-center items-center hover:bg-orange-50 transition-all active:scale-95"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M20.59 22C20.59 18.13 16.74 15 12 15C7.26 15 3.41 18.13 3.41 22" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                                   
+              </button>
+            </div>
+          </section>
+        </div>
+      </nav>
+    </header>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+
+  </body>
+</html>
