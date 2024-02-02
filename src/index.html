@@ -15,8 +15,8 @@
 
     <!-- Modal de Jugo -->
     <div id="juice-modal" tabindex="-1" aria-hidden="true" data-modal-placement="top-center" class="fixed top-16 left-2/4 -translate-x-2/4 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto h-[calc(100%-1rem)] max-h-full">
-      <div class="relative p-4 w-full max-w-4xl max-h-full">
-        <div class="relative bg-white rounded-[32px] shadow border border-zinc-200 py-24 px-16 flex gap-20 justify-between w-full">
+      <div class="relative p-4 w-full max-w-4xl max-h-full mb-60">
+        <div class="relative bg-white rounded-[32px] shadow border border-zinc-200 py-24 px-16 flex flex-col-reverse md:flex-row gap-20 justify-between w-full">
           <button class="w-10 h-10 rounded-full bg-white absolute top-6 right-6" data-modal-hide="juice-modal">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M20 36.6667C29.1667 36.6667 36.6667 29.1667 36.6667 20C36.6667 10.8333 29.1667 3.33334 20 3.33334C10.8334 3.33334 3.33337 10.8333 3.33337 20C3.33337 29.1667 10.8334 36.6667 20 36.6667Z" stroke="#F4651D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -26,13 +26,13 @@
             <span class="sr-only">Close modal</span>           
           </button>
           <div>
-            <h2 class="bakbak-one text-[40px] text-[#292D32]">Juego de fresa natural</h2>
-            <p class="text-xl text-zinc-400">Disfruta de un delicioso jugo de fresa 100% natural, libre de conservantes y aditivos que pueden perjudicar la salud.</p>
+            <h2 class="bakbak-one text-2xl md:text-[40px] text-[#292D32] text-center md:text-left">Juego de fresa natural</h2>
+            <p class="text-base md:text-xl text-zinc-400 text-center md:text-left">Disfruta de un delicioso jugo de fresa 100% natural, libre de conservantes y aditivos que pueden perjudicar la salud.</p>
             <div class="mt-6 divide-y divide-zinc-200">
-              <p class="text-xl text-[#292D32] font-semibold py-4">Tamaño de la porción <span class="font-extrabold">500 ml</span></p>
-              <p class="text-xl text-[#292D32] font-semibold py-4">Contenido energético <span class="font-extrabold">48.4 kcal</span></p>
-              <p class="text-xl text-[#292D32] font-semibold py-4">Grasas <span class="font-extrabold">0%</span></p>
-              <div class="text-xl text-[#292D32] font-semibold py-4 flex gap-4 items-center">
+              <p class="text-xl text-[#292D32] font-semibold py-4 text-center md:text-left">Tamaño de la porción <span class="font-extrabold">500 ml</span></p>
+              <p class="text-xl text-[#292D32] font-semibold py-4 text-center md:text-left">Contenido energético <span class="font-extrabold">48.4 kcal</span></p>
+              <p class="text-xl text-[#292D32] font-semibold py-4 text-center md:text-left">Grasas <span class="font-extrabold">0%</span></p>
+              <div class="text-xl text-[#292D32] font-semibold py-4 flex justify-center md:justify-start gap-4 items-center">
                 Clasificación
                 <div class="flex gap-1">
                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,9 +53,11 @@
                 </div>
               </div>
             </div>
-            <h3 class="bakbak-one text-5xl text-orange-500 mt-10">$ 3,00</h3>
+            <h3 class="bakbak-one text-5xl text-orange-500 mt-10 text-center md:text-left">$ 3,00</h3>
           </div>
-          <img src="./assets/images/juice_red_great.png" alt="great juice">
+          <div class="max-w-28 md:min-w-[189px] mx-auto md:m-0">
+            <img src="./assets/images/juice_red_great.png" alt="great juice" class="w-full h-full object-contain">
+          </div>
         </div>
       </div>
     </div>
@@ -258,7 +260,7 @@
           <h1 class="archivo-black text-[#292D32] text-5xl sm:text-[64px] mt-6 lg:mt-8 leading-[52px] sm:leading-[68px] max-w-xl text-center lg:text-left mx-auto lg:m-0">Jugo para hacer tu día fresco</h1>
           <p class="text-base sm:text-[22px] text-zinc-400 max-w-xl mt-6 text-center lg:text-left mx-auto lg:m-0">Manténgase fresco este verano ya que hay jugos de frutas y bebidas disponibles en línea.</p>
           <div class="mt-6 sm:mt-12 flex flex-col-reverse sm:flex-row items-center sm:items-start justify-center lg:justify-start gap-6 sm:gap-8">
-            <button class="px-6 py-5 rounded-full min-w-max flex gap-3 items-center bg-orange-500 hover:bg-orange-600 transition-all text-white uppercase font-medium max-w-max">
+            <button class="px-6 py-5 rounded-full min-w-max flex gap-3 items-center bg-orange-500 hover:bg-orange-600 transition-all text-white uppercase font-medium active:scale-95 max-w-max">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2 2H3.74001C4.82001 2 5.67 2.93 5.58 4L4.75 13.96C4.61 15.59 5.89999 16.99 7.53999 16.99H18.19C19.63 16.99 20.89 15.81 21 14.38L21.54 6.88C21.66 5.22 20.4 3.87 18.73 3.87H5.82001" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M16.25 22C16.9404 22 17.5 21.4404 17.5 20.75C17.5 20.0596 16.9404 19.5 16.25 19.5C15.5596 19.5 15 20.0596 15 20.75C15 21.4404 15.5596 22 16.25 22Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -267,7 +269,7 @@
               </svg>              
               Agregar al carrito
             </button>
-            <button class="px-6 py-5 rounded-full min-w-max sm:border border-orange-500 hover:bg-orange-50 transition-all text-orange-500 uppercase font-medium max-w-max">            
+            <button class="px-6 py-5 rounded-full min-w-max sm:border border-orange-500 hover:bg-orange-50 transition-all text-orange-500 uppercase font-medium active:scale-95 max-w-max">            
               Saber más
             </button>
           </div>
@@ -310,7 +312,7 @@
         <div
           data-modal-target="juice-modal"
           data-modal-toggle="juice-modal"
-          class="px-11 py-8 rounded-[32px] border border-zinc-200 bg-white flex gap-10 items-center max-w-max select-none cursor-pointer"
+          class="px-11 py-8 rounded-[32px] border border-zinc-200 bg-white flex gap-10 items-center max-w-max select-none cursor-pointer hover:scale-105 transition-all"
         >
           <div class="max-h-[134px] h-full">
             <img src="./assets/images/juice_green.png" alt="juice green" class="h-full w-full object-contain">
@@ -341,7 +343,7 @@
         <div
           data-modal-target="juice-modal"
           data-modal-toggle="juice-modal"
-          class="px-11 py-8 rounded-[32px] border border-zinc-200 bg-white flex gap-10 items-center max-w-max select-none cursor-pointer"
+          class="px-11 py-8 rounded-[32px] border border-zinc-200 bg-white flex gap-10 items-center max-w-max select-none cursor-pointer hover:scale-105 transition-all"
         >
           <div class="max-h-[134px] h-full">
             <img src="./assets/images/juice_red.png" alt="juice red" class="h-full w-full object-contain">
@@ -372,7 +374,7 @@
         <div
           data-modal-target="juice-modal"
           data-modal-toggle="juice-modal"
-          class="px-11 py-8 rounded-[32px] border border-zinc-200 bg-white flex gap-10 items-center max-w-max select-none cursor-pointer"
+          class="px-11 py-8 rounded-[32px] border border-zinc-200 bg-white flex gap-10 items-center max-w-max select-none cursor-pointer hover:scale-105 transition-all"
         >
           <div class="max-h-[134px] h-full">
             <img src="./assets/images/juice_orange.png" alt="juice orange" class="h-full w-full object-contain">
@@ -403,7 +405,7 @@
         <div
           data-modal-target="juice-modal"
           data-modal-toggle="juice-modal"
-          class="px-11 py-8 rounded-[32px] border border-zinc-200 bg-white flex gap-10 items-center max-w-max select-none cursor-pointer"
+          class="px-11 py-8 rounded-[32px] border border-zinc-200 bg-white flex gap-10 items-center max-w-max select-none cursor-pointer hover:scale-105 transition-all"
         >
           <div class="max-h-[134px] h-full">
             <img src="./assets/images/juice_yellow.png" alt="juice yellow" class="h-full w-full object-contain">
